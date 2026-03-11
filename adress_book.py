@@ -94,7 +94,7 @@ class Birthday(Field):
         # If provided string does not match the format DD.MM.YYYY, raise ValueError
         except ValueError:
             raise ValueError(f'Invalid date format: {value}. Use DD.MM.YYYY')
-    
+    # Define __str__ method to represent birthday as a string
     def __str__(self):
          return self.value.strftime('%d.%m.%Y')
 
